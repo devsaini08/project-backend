@@ -1,13 +1,16 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
+import dotenv from 'dotenv';
+dotenv.config()
 
 
 
 // const PORT = process.env.PORT;
-// const URL = process.env.MONGODB_URI;
+const URL = process.env.MONGODB_URI;
 
-const PORT = 8000;
-const URL = "mongodb+srv://dev:devsaini08@cluster0.dch1s6p.mongodb.net";
+
+// const URL = "mongodb+srv://dev:devsaini08@cluster0.dch1s6p.mongodb.net";
+// console.log(URi);
 
 
 
