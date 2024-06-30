@@ -67,6 +67,7 @@ userSchema.methods.isPasswordCorrect = async function (password) {
     return await bcrypt.compare(password, this.pasaword)
 }
 
+// to gentare access token
 userSchema.methods.genrateAccessToken = function () {
     jwt.sign(
         {
@@ -80,9 +81,7 @@ userSchema.methods.genrateAccessToken = function () {
     )
 }
 
-console.log("fciuhcib",process.env.ACCESS_TOKEN_EXPIRY);
-console.log("fciuhcib",process.env.ACCESS_TOKEN_SECRET);
-
+// to genrate refresh token
 userSchema.methods.genrateRefreshToken = function () {
     jwt.sign(
         {
