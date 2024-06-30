@@ -86,6 +86,7 @@ dotenv.config()
 
 
 const PORT = process.env.PORT;
+// console.log(PORT);
 
 app.on("error", (error) => {
     console.log("ERROR", error);

@@ -11,11 +11,18 @@ app.use(cors({
 }))
 
 app.use(express.json({ limit: "20kb" }))
-app.use(express.urlencoded({ extended: true, limit:"20kb" }))
+app.use(express.urlencoded({ extended: true, limit: "20kb" }))
 app.use(express.static("public"))
 
 // cookieParser is use for acees the user browser cookie and set (curd opration)
 app.use(cookieParser())
+
+// routs import
+import userRouter from "./routes/user.routs.js"
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
 
 
 
