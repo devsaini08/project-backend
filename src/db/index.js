@@ -6,12 +6,13 @@ dotenv.config()
 
 
 // const PORT = process.env.PORT;
-const URL = process.env.MONGODB_URI;
 
 
 // const URL = "mongodb+srv://dev:devsaini08@cluster0.dch1s6p.mongodb.net";
 // console.log(URi);
+const URL = process.env.MONGODB_URI;
 
+// console.log(URL);
 
 
 const connectDB = async () => {
